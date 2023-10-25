@@ -1,17 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.RentMaster" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.RentMaster" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="colorPrimary">@color/floralwhite</item>
-        <item name="colorPrimaryVariant">@color/lightblue</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color -->
-        <item name="colorSecondary">@color/lightskyblue</item>
-        <item name="colorSecondaryVariant">@color/lightskyblue</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <item name="android:windowBackground">@color/floralwhite</item>
+
     </style>
 </resources>
