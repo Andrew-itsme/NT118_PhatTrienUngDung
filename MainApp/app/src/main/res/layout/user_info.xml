@@ -43,13 +43,16 @@
                 android:layout_width="60dp"
                 android:layout_height="47dp"
                 android:text="Họ Tên:"
-                android:textSize="16sp" />
+                android:textColor="#BF0F87D8"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/userNameLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:fontFamily="sans-serif"
                 android:text="TextView" />
         </LinearLayout>
 
@@ -62,7 +65,9 @@
                 android:layout_width="80dp"
                 android:layout_height="47dp"
                 android:text="Ngày Sinh:"
-                android:textSize="16sp" />
+                android:textColor="#BF0F87D8"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/userBirthLabel"
@@ -81,7 +86,9 @@
                 android:layout_width="40dp"
                 android:layout_height="47dp"
                 android:text="SĐT:"
-                android:textSize="16sp" />
+                android:textColor="#BF0F87D8"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/userPhoneNumber"
@@ -100,7 +107,9 @@
                 android:layout_width="50dp"
                 android:layout_height="47dp"
                 android:text="Email:"
-                android:textSize="16sp" />
+                android:textColor="#BF0F87D8"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/userEmail"
