@@ -1,39 +1,33 @@
 package com.example.rentmasterapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 
-import com.hbb20.CountryCodePicker;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginNumberScene extends AppCompatActivity {
-    CountryCodePicker countryCodePicker;
+    //CountryCodePicker countryCodePicker;
     EditText phoneInput;
-    Button sendOtpBtn;
+    Button sendlogin;
     ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_number_scene);
-
-        countryCodePicker = findViewById(R.id.login_countrycode);
-        phoneInput = findViewById(R.id.login_mobile_number);
-        sendOtpBtn = findViewById(R.id.send_otp_btn);
+        sendlogin = findViewById(R.id.signin_btn);
         progressBar = findViewById(R.id.login_progress_bar);
 
-        countryCodePicker.registerCarrierNumberEditText(phoneInput);
-        sendOtpBtn.setOnClickListener((v) -> {
-            if (!countryCodePicker.isValidFullNumber()){
-                phoneInput.setError("Phone number not valid");
-                return;
+        sendlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginNumberScene.this, HomeScene.class);
+                startActivity(intent);
             }
-            // Intent intent = new Intent(LoginNumberScene.this,)
         });
-
     }
 }
