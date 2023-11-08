@@ -4,24 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/whitesmoke"
+    android:background="@drawable/signup_bck_app"
     android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/whitesmoke">
-
-        <Button
-            android:id="@+id/tvLogout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Log_out"
-            android:layout_alignParentRight="true"
-            android:textColor="@color/blue"
-            android:backgroundTint="@color/whitesmoke"
-            android:textSize="16sp" />
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -35,7 +24,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/deepskyblue"
+        android:background="@drawable/solid_80_white_background"
+        android:layout_margin="15dp"
         android:layout_weight="2"
         >
 
@@ -47,8 +37,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@color/deepskyblue" />
+            android:layout_marginBottom="10dp" />
 
         <TableRow
             android:layout_width="match_parent"
@@ -68,9 +57,9 @@
                 android:layout_gravity="right"
                 android:layout_marginRight="17dp"
                 android:layout_marginBottom="5dp"
-                android:backgroundTint="@color/coral"
+                android:backgroundTint="@color/lightcoral"
                 android:text="Thêm"
-                android:textColor="@color/aliceblue"
+                android:textColor="@color/white"
                 android:textSize="@dimen/text_small" />
         </TableRow>
     </RelativeLayout>
@@ -87,7 +76,7 @@
             android:background="@color/whitesmoke">
 
             <ImageButton
-                android:id="@+id/userInfor"
+                android:id="@+id/btn_user"
                 android:layout_width="127dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
@@ -96,22 +85,22 @@
                 android:src="@drawable/user" />
 
             <ImageButton
-                android:id="@+id/riseInfor"
+                android:id="@+id/btn_home"
                 android:layout_width="127dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/whitesmoke"
                 android:scaleType="centerInside"
-                android:src="@drawable/success" />
+                android:src="@drawable/home" />
 
             <ImageButton
-                android:id="@+id/settingInfor"
+                android:id="@+id/btn_menu"
                 android:layout_width="127dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/whitesmoke"
                 android:scaleType="centerInside"
-                android:src="@drawable/settings" />
+                android:src="@drawable/menu" />
         </TableRow>
     </TableLayout>
 

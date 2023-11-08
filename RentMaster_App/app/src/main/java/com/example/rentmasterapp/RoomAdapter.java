@@ -21,7 +21,7 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.ViewHolder> {
     @NonNull
     @Override
     public RoomAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_lvroom, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_room, parent, false);
         return new ViewHolder(view);
     }
 
@@ -50,13 +50,13 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.ViewHolder> {
         }
         public void bind (Room room){
             if(room.getRoomNumber() != null){
-                tvRoom.setText(room.getRoomNumber());
+                tvRoom.setText("Số phòng: " +room.getRoomNumber());
             }
             if(room.getRoomMaster() != null){
-                tvRoomMaster.setText(room.getRoomMaster());
+                tvRoomMaster.setText("Người thuê: "+ room.getRoomMaster());
             }
             if(room.getDayofHare() != null){
-                tvDayOfHare.setText(room.getDayofHare());
+                tvDayOfHare.setText("Thời gian thuê: " + room.getDayofHare());
             }
         }
 

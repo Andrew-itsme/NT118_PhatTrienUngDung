@@ -2,7 +2,7 @@ package com.example.rentmasterapp;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
-import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,24 +19,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomeScene extends AppCompatActivity {
-    Button tvLogout;
+
     RecyclerView rlvroom;
-    ImageButton user, rise, setting;
+    ImageButton btnUser, btnHome, btnMenu;
     Button btnadd;
     List<Room> roomList = new ArrayList<>();
-    ArrayList<item_room> arrayList = new ArrayList<item_room>();
+    //ArrayList<item_room> arrayList = new ArrayList<item_room>();
     RoomAdapter adapter = null;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        tvLogout = ( Button) findViewById(R.id.tvLogout);
         rlvroom = (RecyclerView) findViewById(R.id.rlvRoom);
-        user = (ImageButton) findViewById(R.id.userInfor);
-        rise = (ImageButton) findViewById(R.id.riseInfor);
-        setting = (ImageButton) findViewById(R.id.settingInfor);
+        btnUser = (ImageButton) findViewById(R.id.btn_user);
+        btnHome = (ImageButton) findViewById(R.id.btn_home);
+        btnMenu = (ImageButton) findViewById(R.id.btn_menu);
         btnadd = (Button) findViewById(R.id.btnAdd);
+        btnUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentUser = new Intent(HomeScene.this, UserScene.class);
+                startActivity(intentUser);
+            }
+        });
+        btnMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeScene.this, MenuScene.class);
+                startActivity(intent);
+            }
+        });
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         rlvroom.setLayoutManager(layoutManager);
         adapter = new RoomAdapter(this,roomList);
@@ -48,39 +61,40 @@ public class HomeScene extends AppCompatActivity {
                 builder.setTitle("Thêm phòng mới");
                 // Thiết lập giao diện của hộp thoại cảnh báo
                 View viewInflated = LayoutInflater.from(HomeScene.this).inflate(R.layout.add_room_dialog, (ViewGroup) view.getParent(), false);
+                builder.setView(viewInflated);
+                AlertDialog dialog = builder.create();
                 // Tạo các trường để điền thông tin
                 final EditText edRoom = (EditText) viewInflated.findViewById(R.id.ed_room);
                 final EditText edName = (EditText) viewInflated.findViewById(R.id.ed_name);
                 final EditText edDayOfHare = (EditText) viewInflated.findViewById(R.id.ed_dayOfhare);
-                builder.setView(viewInflated);
-
-                // Thiết lập nút "Thêm" trong hộp thoại cảnh báo
-                builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                final Button btnAdd = (Button) viewInflated.findViewById((R.id.btn_add_dialog));
+                btnAdd.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Lấy thông tin từ trường nhập và thực hiện hành động cần thiết
-                        String room = edName.getText().toString();
+                    public void onClick(View view) {
+                        String room = edRoom.getText().toString();
                         String name = edName.getText().toString();
                         String dayOfHare = edDayOfHare.getText().toString();
-                        // Thực hiện hành động thêm thông tin vào danh sách hoặc cơ sở dữ liệu
+                        importProcessing(room, name, dayOfHare);
+                        dialog.dismiss();
+                    }
+                    @SuppressLint("NotifyDataSetChanged")
+                    private void importProcessing(String room, String name, String dayOfHare)
+                    {
+                        Room roomlist = new Room();
+                        roomlist.setRoomNumber(room);
+                        roomlist.setRoomMaster(name);
+                        roomlist.setDayofHare(dayOfHare);
+                        roomList.add(roomlist);
+                        adapter.notifyDataSetChanged();
                     }
                 });
 
-                // Thiết lập nút "Hủy" trong hộp thoại cảnh báo
-                builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel(); // Đóng hộp thoại cảnh báo
-                    }
-                });
-
-                builder.show(); // Hiển thị hộp thoại cảnh báo
+                dialog.show();
             }
         });
-    }
 
-    private void importProcessing()
-    {
 
     }
+
+
 }

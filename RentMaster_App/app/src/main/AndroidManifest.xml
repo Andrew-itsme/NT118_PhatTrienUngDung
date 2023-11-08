@@ -13,7 +13,7 @@
         android:theme="@style/Base.Theme.RentMasterApp"
         tools:targetApi="31">
         <activity
-            android:name=".LoginNumberScene"
+            android:name=".LoginScene"
             android:exported="false" />
         <activity
             android:name=".HomeScene"/>
@@ -29,7 +29,14 @@
         <activity
             android:name=".MainActivity"
             android:exported="false">
-
+        </activity>
+        <activity
+            android:name=".UserScene"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".MenuScene"
+            android:exported="false">
         </activity>
     </application>
 
