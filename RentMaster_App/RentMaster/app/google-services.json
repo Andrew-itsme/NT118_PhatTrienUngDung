@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "126382098371",
+    "project_id": "rent-master-uit",
+    "storage_bucket": "rent-master-uit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126382098371:android:78473f585f08c299739f76",
+        "android_client_info": {
+          "package_name": "com.example.rentmasterapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB27olLJ-WTQ93can7ct7NcK9NK8CoJ6-0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

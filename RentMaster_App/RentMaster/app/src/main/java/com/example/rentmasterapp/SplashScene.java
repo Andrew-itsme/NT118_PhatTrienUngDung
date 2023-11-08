@@ -15,9 +15,9 @@ public class SplashScene extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashScene.this,LoginNumberScene.class));
+                startActivity(new Intent(SplashScene.this,LoginActivity.class));
                 finish();
             }
-        },3000);
+        },2000);
     }
 }
