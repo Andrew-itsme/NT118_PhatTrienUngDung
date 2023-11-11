@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/solid_30_white_background"
+    android:layout_marginHorizontal="20dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="146dp"
+            android:layout_height="match_parent"
+            tools:srcCompat="@tools:sample/avatars" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="146dp"
+            android:layout_height="match_parent"
+            tools:srcCompat="@tools:sample/avatars" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên người thuê:" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="27dp" />
+
+    <TextView
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:text="Số CCCD:" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="342dp"
+        android:layout_height="25dp"
+        android:inputType="phone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ngày thuê trọ:" />
+
+    <EditText
+        android:id="@+id/editTextStartDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số lượng người:" />
+
+    <EditText
+        android:id="@+id/editTextNumberOfPeople"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tình trạng đóng tiền:" />
+
+    <EditText
+        android:id="@+id/editTextPaymentStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số phòng:" />
+
+    <EditText
+        android:id="@+id/editTextRoomNumber"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:inputType="number" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ngày Thuê:" />
+
+    <EditText
+        android:id="@+id/editTextDayhire"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:inputType="number" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thời gian Thuê:" />
+
+    <EditText
+        android:id="@+id/editTextHire"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:inputType="number" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="thêm" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="xóa" />
+
+</LinearLayout>
